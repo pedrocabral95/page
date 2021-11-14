@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+  <ul>
+    {% for gen in general %}
+
+      <li> <p>{{ gen }}</p> </li>
+
+    {% endfor %}
+  </ul>
+
+    <p>Programming languanges:</p>
+
+    <p>Good Command :</p>
+
+  <ul>
+    {% for lang in good %}
+
+      <li><p> {{ lang }}</p> </li>
+
+    {% endfor %}
+  </ul>
+
+    <p> Command: </p>
+  <ul>
+     {% for lang in normal %}
+
+      <li><p>{{  lang }}</p></li>
+
+    {% endfor %}
+
+  </ul>
+
+  </header>
+{%  endblock  %}

@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Pedro Cabral</title>
+{% load static %}
+<link rel="shortcut icon" type="image/png" href="{% static 'P.png' %}"  sizes="128x128">
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type= "image' href="{% static 'git.png' %}" sizes=128x128">
+<style>
+body  {
+  margin: 0;
+  padding: 20px;
+  background: #222;
+}
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  width: 1250px;
+  text-align: center;
+}
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.active {
+  background-color: #4CAF50;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button4 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.button4:hover {background-color: #e7e7e7;}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-git {
+  background: #3B5998;
+  color: white;
+}
+#container  {
+  margin: 1em left-center;
+  width: 1290px;
+  height: auto;
+  background: #f1f1f1;
+  }
+#menu  {
+  float: right;
+  width: 255px;
+  background: #f1f1f1;
+}
+#contents  {
+  float: left;
+  width: 1035px;
+  margin: 0 0 0 0px;
+}
+#footer  {
+  clear: both;
+  background: #666;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Hello World!</h1>
+</div>
+<div id="container">
+  <div id="header"></div>
+  <div id="mainnav"></div>
+
+  <div id="menu">
+    {% load static %}
+    <div class="card" style="width:300px">
+
+      <img src="{% static 'main.png' %}" alt="My image">
+
+        <div class="card-body">
+          <h4 class="card-title">Pedro Cabral</h4>
+            <p class="card-text">Student at IST - TagusPark</p>
+            <p class="card-text">Corporal at Exército Português</p>
+            <p class="card-text">24 years old.</p>
+            <a href="{% static 'CV.pdf'%}" class="button button4">See Profile</a>
+        </div>
+    </div>
+
+  </div>
+  <div class="topnav">
+    {% include "navbar.html"%}
+  </div>
+
+  <div     id="contents">
+    {% block content %}
+      replace me
+    {% endblock %}
+  </div>
+
+  <div     id="footer">
+    <h2> GHl</h2>
+  </div>
+</div>
+
+</body>
+</html>
